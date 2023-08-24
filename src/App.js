@@ -19,7 +19,7 @@ export default function App() {
 
         }, {
           path: "shops",
-          element: <h1>Shops</h1>
+          element: <h1>Emporiums</h1>
         },
         {
           path: "services",

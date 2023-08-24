@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "./header.css";
 import logo from "../../assets/images/ABSs.png";
-import { Link, NavLink } from 'react-router-dom';
+import {  NavLink } from 'react-router-dom';
 export default function Header() {
   const [loggedIn, setLoggedIn] = useState(false); // Track login state
   const [userName, setUserName] = useState(""); // Store user name (if logged in)
@@ -27,7 +27,7 @@ export default function Header() {
       <nav className='navbar'>
         <ul>
          <li><NavLink className="nav-links" to={`/`}>Home</NavLink></li> 
-          <li><NavLink className="nav-links" to={'shops'}>Shops</NavLink></li>
+          <li><NavLink className="nav-links" to={'shops'}>Emporiums</NavLink></li>
           <li><NavLink className="nav-links" to={'services'}>Services</NavLink></li>
           <li><NavLink className="nav-links" to={'about_us'}>About us</NavLink></li>
          
