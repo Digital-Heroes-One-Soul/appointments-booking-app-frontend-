@@ -1,14 +1,41 @@
 import React from 'react'
-import Header from './components/header/Header'
-import { Outlet } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Home from './components/home/Home';
 
-// I will consider the app as my shared layout.
+
+
+
 export default function App() {
-  return (
-    <div>
-      <Header/>
-      <Outlet/>
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+      errorElement: <h1 style={{ color: "red" }}> Error..... Page not found</h1>,
+      children: [
+        {
+          path: "/",
+          element: <h1>Home</h1>,
+          index: true
 
-    </div>
+        }, {
+          path: "shops",
+          element: <h1>Shops</h1>
+        },
+        {
+          path: "services",
+          element: <h1>Services</h1>
+        },
+        {
+          path: "about_us",
+          element: <h1>About_us</h1>
+        },
+
+      ]
+    },
+  ]);
+  return (
+    <RouterProvider router={router}>
+      <Home />
+    </RouterProvider>
   )
 }
