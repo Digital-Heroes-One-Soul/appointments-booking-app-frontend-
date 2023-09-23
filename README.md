@@ -6,7 +6,6 @@ This app enables users to look up emporiums that offer services that require app
 
 
 
-
 ## for us it will change soon 
 User acceptance for an app that combines emporiums and services, allowing users to search for emporiums and services and make bookings, can depend on several factors. To increase user acceptance, you should focus on the following key aspects:
 

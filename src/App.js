@@ -1,11 +1,20 @@
 import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './components/home/Home';
-
-
+import EmporiumsContainer from './components/emporiums/EmporiumsContainer';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Emporiums from './components/emporiums/Emporiums';
 
 
 export default function App() {
+
+  const divStyle = {
+    color: 'black',          // CSS property 'color': 'blue'
+    backgroundColor: '#eee', // CSS property 'background-color': '#eee'
+    fontSize: '16px',       // CSS property 'font-size': '16px'
+    padding: '10px'         // CSS property 'padding': '10px'
+  };
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -18,8 +27,12 @@ export default function App() {
           index: true
 
         }, {
-          path: "shops",
-          element: <h1>Emporiums</h1>
+          path: "emporiums",
+          element: <div style={divStyle}><EmporiumsContainer /></div>
+        },
+        , {
+          path: "emporiums/:name",
+          element: <Emporiums />
         },
         {
           path: "services",
@@ -27,7 +40,7 @@ export default function App() {
         },
         {
           path: "about_us",
-          element: <h1>About_us</h1>
+          element: <p>about_us</p>
         },
 
       ]
